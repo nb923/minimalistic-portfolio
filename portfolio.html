@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nideesh Bharath kumar</title>
+    <style>
+        :root {
+            --bg: #F7F2E8;
+            --fg: #000000;
+            --dim: #888888;
+            --link: #000000;
+            --font: 'Menlo', 'Monaco', monospace;
+        }
+        html { font-size: 16px; height: 100%; }
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: var(--font);
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        main {
+            width: fit-content;
+            max-width: 90%;
+            padding: 2rem;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        h1, h2, p, ul, .nav { margin: 0; padding: 0; }
+        h1 { 
+            font-weight: bold; 
+            font-size: inherit; 
+            margin-bottom: 0.5rem; 
+        }
+        .nav { 
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem; 
+        }
+        p { margin-bottom: 1rem; }
+        h2 { 
+            font-weight: bold; 
+            font-size: inherit; 
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        ul { list-style: none; }
+        li { margin-bottom: 0.5rem; }
+        li::before { content: "- "; color: var(--dim); }
+        a { 
+            color: var(--link); 
+            text-decoration: underline;
+            position: relative;
+        }
+        a:hover { background: var(--fg); color: var(--bg); text-decoration: none; }
+        .dim { color: var(--dim); }
+        .dim a { color: var(--dim); }
+        .dim a:hover { background: var(--fg); color: var(--bg); }
+        main > *:last-child { margin-bottom: 0 !important; }
+        ::selection {
+            background: var(--fg);
+            color: var(--bg);
+        }
+        ::-moz-selection {
+            background: var(--fg);
+            color: var(--bg);
+        }
+        [data-tooltip] {
+            position: relative;
+        }
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--fg);
+            color: var(--bg);
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        [data-tooltip]:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>nideesh bharath kumar</h1>
+        <div class="nav">
+            <a href="https://www.linkedin.com/in/bknideesh" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a href="https://github.com/nb923" target="_blank" rel="noopener noreferrer">github</a>
+            <a href="resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+        </div>
+        <p>
+            <a href="https://www.cs.rutgers.edu/" target="_blank" rel="noopener noreferrer" data-tooltip="junior, 4.0 gpa">rutgers cs student</a>. low level perf, ml systems, distributed infra.       
+        </p>
+        <p>
+            incoming intern @ <a href="https://about.google/" target="_blank" rel="noopener noreferrer" data-tooltip="software engineer intern"><strong>google</strong></a> (summer '26) & <a href="https://www.jnj.com" target="_blank" rel="noopener noreferrer" data-tooltip="software engineer intern"><strong>j&j</strong></a> (spring '26).<br>
+            <span class="dim">prev @ <a href="https://ifh.rutgers.edu/" target="_blank" rel="noopener noreferrer" data-tooltip="data engineering intern">rutgers ifh</a>.</span>
+        </p>
+        <h2>projects</h2>
+        <ul>
+            <li><a href="https://github.com/nb923/nutricart" target="_blank" rel="noopener noreferrer" data-tooltip="hackru f25">nutricart</a> <span class="dim">(won out of 250 ppl). nutrition tracking smart cart.</span></li>
+            <li><a href="https://github.com/Joeweh/BreatheEasy" target="_blank" rel="noopener noreferrer" data-tooltip="csbase climate hack">breathe easy</a> <span class="dim">(won out of 400 ppl). pollution-avoiding routing.</span></li>
+            <li><a href="https://github.com/keshavgoel787/ForgetMeNot" target="_blank" rel="noopener noreferrer" data-tooltip="hackru s25">forgetmenot</a> <span class="dim">(won out of 450 ppl). ai dementia care therapy.</span></li>
+        </ul>
+        <h2>info</h2>
+        <ul>
+            <li>speaks rust, c++, python.</li>
+            <li>indie rock enjoyer.</li>
+            <li><a href="mailto:bknideesh@gmail.com" target="_blank" rel="noopener noreferrer">bknideesh@gmail.com</a>.</li>
+            <li>nj / ny.</li>
+        </ul>
+    </main>
+</body>
+</html>
